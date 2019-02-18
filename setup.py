@@ -210,6 +210,7 @@ password = [
 pinot = ['pinotdb==0.1.1']
 postgres = ['psycopg2>=2.7.4']
 qds = ['qds-sdk>=1.10.4']
+r = ['rpy2>=2.9.5']
 rabbitmq = ['librabbitmq>=1.6.1']
 redis = ['redis>=2.10.5,<3.0.0']
 salesforce = ['simple-salesforce>=0.72']
@@ -261,7 +262,7 @@ devel_all = (sendgrid + devel + all_dbs + doc + samba + slack + crypto + oracle 
              docker + ssh + kubernetes + celery + redis + gcp_api +
              datadog + zendesk + jdbc + ldap + kerberos + password + webhdfs + jenkins +
              druid + pinot + segment + snowflake + elasticsearch +
-             atlas + azure + aws)
+             atlas + azure + aws + r)
 
 # Snakebite & Google Cloud Dataflow are not Python 3 compatible :'(
 if PY3:
@@ -369,6 +370,7 @@ def do_setup():
             'pinot': pinot,
             'postgres': postgres,
             'qds': qds,
+            'r': r,
             'rabbitmq': rabbitmq,
             'redis': redis,
             'salesforce': salesforce,
