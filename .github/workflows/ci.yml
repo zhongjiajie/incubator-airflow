@@ -98,6 +98,7 @@ jobs:
       KUBERNETES_VERSION: v1.15.3
     steps:
       - uses: actions/checkout@master
+      - uses: engineerd/setup-kind@v0.3.0
       - uses: actions/setup-python@v1
         with:
           python-version: ${{ env.PYTHON_VERSION }}
@@ -253,6 +254,7 @@ jobs:
     env:
       PYTHON_VERSION: 3.6
       INSTALL_AIRFLOW_VERSION: "1.10.9"
+      TRAVIS_JOB_NAME: "Generate requirements"
     steps:
       - uses: actions/checkout@master
       - name: "Generate requirements"
@@ -264,6 +266,7 @@ jobs:
     env:
       INSTALL_AIRFLOW_VERSION: "1.10.9"
       PYTHON_VERSION: 3.6
+      TRAVIS_JOB_NAME: "Prepare & test backport packages 1.10.9"
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-python@v1
@@ -280,6 +283,7 @@ jobs:
     env:
       INSTALL_AIRFLOW_VERSION: "1.10.6"
       PYTHON_VERSION: 3.6
+      TRAVIS_JOB_NAME: "Prepare & test backport packages 1.10.6"
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-python@v1
