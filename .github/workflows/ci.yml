@@ -36,6 +36,7 @@ jobs:
     env:
       PYTHON_VERSION: 3.6
       AIRFLOW_MOUNT_SOURCE_DIR_FOR_STATIC_CHECKS: "true"
+      SKIP: "pylint-tests,generate-requirements"
       TRAVIS_JOB_NAME: "Static"
     steps:
       - uses: actions/checkout@master
